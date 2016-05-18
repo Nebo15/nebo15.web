@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     $('#map').each(function() { 
         function initialize() {
-            var myLatlng = {lat: 50.439475, lng: 30.527451 };
+            var myLatlng = {lat: 50.445954, lng: 30.4948647 };
 
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom                : 18,
