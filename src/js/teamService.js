@@ -1,7 +1,7 @@
 (function(w,d) {
     var TeamList = function (titleElem, descriptionElem, config, callback) {
         this.config = {
-            speed: 3000,
+            speed: 4000,
             reverse: false,
             activeClass: 'active',
             activeElementTitle: '.team-person',
