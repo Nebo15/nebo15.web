@@ -3,9 +3,9 @@
 //     .whatever
 // 			+s(codedby) 
 // ## gradient example
-//     	+g(#232323, #5c5c5c);
+//     	+g(#232323, #5c5c5c)
 //	   horizontal 
-//     	+gh(#232323, #5c5c5c);
+//     	+gh(#232323, #5c5c5c)
 // ## making bw-images
 //     img
 //			@extend %gray
@@ -17,7 +17,7 @@
 // ## use cycles
 //     @for $i from 1 through 3
 //       .item-#{$i}
-//			width: 2em * $i;
+//			width: 2em * $i
 //     @each $s in a,b,c
 // 	    	#{$s}
 //				display: none 
@@ -240,38 +240,17 @@ body
 		.nav a 
 			color: $white
 
-// projects
 .projects
+
 	margin-top: 30px
-	overflow: hidden
-	+r(768)
-		margin-top: 7px
 	&__in
-		margin: -1% -1% 0 0
-		+clr
-		+r(768)
-			margin: 0
+		display: flex
+		flex-flow: row wrap
+		justify-content: space-between
 
-// project
 .project
-	float: left
-	padding-bottom: 25%
-	margin: 1% 1% 0 0
-	width: 32%
-	background-color: $l_blue
-	background-size: cover
-	background-repeat: no-repeat
-	background-position: 0 0
-	+r(768)
-		margin: 10px 0 0
-		padding-bottom: 40%
-		width: 100%
-		&:first-child
-			margin-top: 0
-	+r(480)
-		padding-bottom: 80%
+	padding: 10px
 
-// contacts
 .contacts
 	height: 100%
 	min-height: 100%
