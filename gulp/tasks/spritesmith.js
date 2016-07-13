@@ -2,7 +2,13 @@ var gulp = require('gulp');
 var notify = require('gulp-notify');
 var spritesmith = require('gulp.spritesmith');
 var config = require('../config');
+var imagemin = require('gulp-imagemin');
 
+gulp.task('images', function() {
+    return gulp.src('./src/img/**/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('./www/img/'));
+});
 
 gulp.task('sprite', function() {
     var spriteData = gulp.src(config.src.img + '/icons/*.png')
@@ -18,11 +24,12 @@ gulp.task('sprite', function() {
     spriteData.img
         .pipe(gulp.dest(config.dest.img));
     spriteData.css
+        .pipe(imagemin())
         .pipe(gulp.dest(config.src.sass+'/lib/'))
         .pipe(notify("New sprite created!"));
 });
 
 gulp.task('sprite:watch', function() {
-    gulp.watch(config.src.img + '/icons/*.png', ['sprite']);
+    gulp.watch(config.src.img + '/icons/*.png', ['sprite','images']);
 });
 

@@ -2,6 +2,9 @@ var gulp = require('gulp');
 var rimraf = require('rimraf');
 var ghPages = require('gulp-gh-pages');
 var config = require('../config');
+var rimraf = require('rimraf');
+var ghPages = require('gulp-gh-pages');
+var config = require('../config');
 
 gulp.task('watch', [
     'sprite:watch',
@@ -18,7 +21,6 @@ gulp.task('delete', function (cb) {
 });
 gulp.task('default', ['build', 'server', 'watch'], function() {});
 gulp.task('build', ['html','font','sprite','copy','js','sass'], function() {});
-
 
 gulp.task('deploy', function () {
   return gulp.src([
