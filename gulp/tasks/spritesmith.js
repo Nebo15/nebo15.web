@@ -4,14 +4,15 @@ var spritesmith = require('gulp.spritesmith');
 var config = require('../config');
 var imagemin = require('gulp-imagemin');
 var debug = require('gulp-debug');
+var gulpIf = require('gulp-if');
+var argv = require('yargs').argv;
 
 gulp.task('images', function() {
     return gulp.src([
         './src/img/**/*',
         '!./src/img/icons/*', '!./src/img/icons'
     ])
-        .pipe(debug())
-        .pipe(imagemin())
+        .pipe(gulpIf(argv.production, imagemin()))
         .pipe(gulp.dest('./build/img/'));
 });
 
@@ -31,6 +32,7 @@ gulp.task('sprite', function() {
     spriteData.css
         .pipe(gulp.dest(config.src.sass+'/lib/'))
         .pipe(notify("New sprite created!"));
+    return spriteData;
 });
 
 gulp.task('sprite:watch', function() {

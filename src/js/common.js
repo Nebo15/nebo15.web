@@ -6,12 +6,6 @@ $(document).ready(function() {
 		$('.js-btn-menu').removeClass('is-active');
 	});
 
-	// $('#fullpage').fullpage({
-	//     menu: '#menu',
-	//     anchors: ['who', 'what', 'where', 'why'],
-	//     autoScrolling: true
-	// });
-
 	$('.js-btn-menu').on('click', function (event){
 		var this_ 	= $(this),
 			parents = this_.parents('.js-header');
