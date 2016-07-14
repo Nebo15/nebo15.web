@@ -3,21 +3,21 @@
 //     .whatever
 // 			+s(codedby) 
 // ## gradient example
-//     	+g(#232323, #5c5c5c);
+//     	+g(#232323, #5c5c5c)
 //	   horizontal 
-//     	+gh(#232323, #5c5c5c);
+//     	+gh(#232323, #5c5c5c)
 // ## making bw-images
 //     img
 //			@extend %gray
 // ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
-//     +r(320)
+//     +r(479)
 //			display: none
 // +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
 //
 // ## use cycles
 //     @for $i from 1 through 3
 //       .item-#{$i}
-//			width: 2em * $i;
+//			width: 2em * $i
 //     @each $s in a,b,c
 // 	    	#{$s}
 //				display: none 
@@ -61,14 +61,18 @@ body
 	+gr
 	font-size: 0
 	line-height: 1.2
-	background: url("../img/bg.png") no-repeat 50% 0
+	background: url("../img/bg.png") 50% 0
 	background-size: cover
+	background-repeat: no-repeat
 	background-attachment: fixed
+	+hdpi
+		background: url("../img/bg-large.jpeg") 0 0
+		background-size: cover
+		background-repeat: no-repeat
+		background-attachment: fixed
 	&.is-hidden
 		overflow: hidden
-	
-// common blocks 
-	
+
 // greeting
 .greeting
 	padding: 60px 44px 0
@@ -90,7 +94,7 @@ body
 // team
 .team
 	padding: 45px 0
-	min-height: 640px
+	min-height: 479px
 	+r(768)
 		padding: 0
 		min-height: 100%
@@ -139,7 +143,9 @@ body
 .face
 	float: right
 	margin-top: 120px
-	width: 66%
+	width: 47%
+	img
+		width: 320px
 	+r(768)
 		margin-top: 30px
 	
@@ -236,38 +242,24 @@ body
 		.nav a 
 			color: $white
 
-// projects
 .projects
 	margin-top: 30px
-	overflow: hidden
-	+r(768)
-		margin-top: 7px
 	&__in
-		margin: -1% -1% 0 0
-		+clr
-		+r(768)
-			margin: 0
-
-// project
+		display: flex
+		flex-flow: row wrap
+		justify-content: space-between
 .project
-	float: left
-	padding-bottom: 25%
-	margin: 1% 1% 0 0
-	width: 32%
-	background-color: $l_blue
-	background-size: cover
-	background-repeat: no-repeat
-	background-position: 0 0
-	+r(768)
-		margin: 10px 0 0
-		padding-bottom: 40%
+	margin: 10px
+	height: 210px
+	width: 210px
+	position: relative
+	img
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+		min-height: 210px
+		min-width: 210px
 		width: 100%
-		&:first-child
-			margin-top: 0
-	+r(480)
-		padding-bottom: 80%
-
-// contacts
 .contacts
 	height: 100%
 	min-height: 100%
@@ -350,4 +342,3 @@ body
 		transform: translateY(2px)
 	100%
 		transform: translateY(0)
-

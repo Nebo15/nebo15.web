@@ -13,14 +13,10 @@
 		padding-left: 0
 
 .section
-
-
 	min-width: 100%
 	height: 100vh
-
 	width: 100%
 	vertical-align: top
-
 	+clr
 	+r(768)
 		height: auto
@@ -29,10 +25,13 @@
 		+r(768)
 			.l
 				padding-bottom: 86px
-	&.is-what
+	&.is-what,&.is-who
 		background-color: rgba($blue, .68)
+		min-height: 100vh
+		height: 100%
 		.title-small
 			padding-left: 40px
+			margin-top: 20px
 			+r(768)
 				display: none
 	&.is-who
@@ -104,6 +103,10 @@
 	+gr
 	+r(768)
 		font-size: 15px
+	&-link
+		color: white
+		text-decoration: underline
+
 
 .title-small
 	font-size: 20px
