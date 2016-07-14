@@ -1,0 +1,18 @@
+.team-person:hover { cursor: pointer; }
+.team-person .active { font-weight: bold; color: red !important; }
+.team-person-item { display: none; -webkit-animation: memberHide 2s forwards; animation: memberHide 2s forwards; }
+.team-person-item.active { display: block !important; -webkit-animation: member 2s forwards; animation: member 2s forwards; }
+
+@-webkit-keyframes member { 0% { opacity: 0; -webkit-transform: translateY(20px); transform: translateY(20px); }
+  100% { opacity: 1; -webkit-transform: translateY(0); transform: translateY(0); } }
+
+@keyframes member { 0% { opacity: 0; -webkit-transform: translateY(20px); transform: translateY(20px); }
+  100% { opacity: 1; -webkit-transform: translateY(0); transform: translateY(0); } }
+@-webkit-keyframes memberhide { 0% { opacity: 1; -webkit-transform: translateY(0px); transform: translateY(0px); }
+  100% { opacity: 0; -webkit-transform: translateY(20px); transform: translateY(20px); } }
+@keyframes memberhide { 0% { opacity: 1; -webkit-transform: translateY(0px); transform: translateY(0px); }
+  100% { opacity: 0; -webkit-transform: translateY(20px); transform: translateY(20px); } }
+
+
+
+/*# sourceMappingURL=slider.css.map */
