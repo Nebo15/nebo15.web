@@ -12,7 +12,6 @@ gulp.task('js', function () {
         config.src.js +'lib/*.js', config.src.js+'*.js'
     ])
         .pipe(concat('main.min.js'))
-        // .pipe(uglify())
         .pipe(gulp.dest(config.dest.js))
         .pipe(reload({stream: true}));
 });
