@@ -1,10 +1,10 @@
 // # SHORT HOWTO
 // ## Sprites
 //     .whatever
-// 			+s(codedby) 
+// 			+s(codedby)
 // ## gradient example
 //     	+g(#232323, #5c5c5c)
-//	   horizontal 
+//	   horizontal
 //     	+gh(#232323, #5c5c5c)
 // ## making bw-images
 //     img
@@ -20,9 +20,9 @@
 //			width: 2em * $i
 //     @each $s in a,b,c
 // 	    	#{$s}
-//				display: none 
+//				display: none
 // ## fonts
-// Save fonts to /src/fonts 
+// Save fonts to /src/fonts
 // +font(book, cytiapro-black-webfont)
 // and create mixin
 // =book
@@ -40,7 +40,7 @@
 +font(Geometria-Bold, Geometria-Bold)
 =gb
 	font-family: "Geometria-Bold", Arial, sans-serif
-	
+
 +font(Geometria-ExtraBold, Geometria-ExtraBold)
 =geb
 	font-family: "Geometria-ExtraBold", Arial, sans-serif
@@ -49,7 +49,7 @@
 .in
 	margin: 0 auto
 	padding: 0 30px 0 40px
-	max-width: 915px 
+	max-width: 915px
 	+r(768)
 		padding: 0 27px 0 22px
 %in
@@ -102,7 +102,7 @@ body
 
 // nav-name
 .nav-name
-	color: $blue 
+	color: $blue
 	+r(960)
 		.title-middle
 			display: none
@@ -115,7 +115,7 @@ body
 	text-transform: uppercase
 	+r(768)
 		margin-top: 0
-		text-shadow: 1px 0 0 rgba($yellow, .8), 0 1px 0 rgba($yellow, .8), -1px 0 0 rgba($yellow, .8), 0 -1px 0 rgba($yellow, .8) 
+		text-shadow: 1px 0 0 rgba($yellow, .8), 0 1px 0 rgba($yellow, .8), -1px 0 0 rgba($yellow, .8), 0 -1px 0 rgba($yellow, .8)
 	li
 		margin-top: 20px
 		display: block
@@ -126,7 +126,7 @@ body
 		&:first-child
 			margin-top: 0
 	a
-		color: $blue 
+		color: $blue
 		+r(768)
 			padding: 2px 1px 1px
 
@@ -139,6 +139,7 @@ body
 		margin-top: 240px
 	+r(768)
 		margin-top: 80px
+	text-shadow: 1px 1px #043a6a
 // face
 .face
 	float: right
@@ -148,7 +149,7 @@ body
 		width: 320px
 	+r(768)
 		margin-top: 30px
-	
+
 .evidence,
 .face
 	+r(768)
@@ -164,6 +165,10 @@ body
 .profession
 	margin-top: 8px
 
+.buzzwords
+	margin-top: 8px
+	font-size: 14px
+
 // line
 .line
 	position: absolute
@@ -174,7 +179,7 @@ body
 	height: 420px
 	width: 100vw
 	z-index: 1
-	background: $blue 
+	background: $blue
 	+r(768)
 		margin-top: -61px
 		height: 220px
@@ -185,7 +190,7 @@ body
 		top: 0
 		height: 420px
 		width: 100vw
-		background: $blue 
+		background: $blue
 		+r(768)
 			height: 220px
 	&:before
@@ -238,8 +243,8 @@ body
 			vertical-align: middle
 			display: inline-block
 		.nav-name
-			color: $white 
-		.nav a 
+			color: $white
+		.nav a
 			color: $white
 
 .projects
@@ -290,8 +295,8 @@ body
 	min-height: 100%
 
 // contact
-.contact 
-	+vertical 
+.contact
+	+vertical
 	.title-average
 		margin-bottom: 18px
 		+r(768)
@@ -299,7 +304,7 @@ body
 			padding-right: 80px
 	&__wrap
 		margin-top: 30px
-		width: 100% 
+		width: 100%
 		vertical-align: middle
 		display: inline-block
 	&__in
@@ -315,7 +320,7 @@ body
 			font-size: 12px
 
 // map
-.map 
+.map
 	+r(768)
 		margin-top: 30px
 	.gm-style
@@ -324,18 +329,18 @@ body
 			display: none !important
 	.gm-style-cc
 		display: none !important
-			
+
 // scroll-icon
 .scroll-icon
 	position: absolute
 	bottom: 30px
 	left: 50%
-	margin-left: calc(-27px / 2) 
-	animation: mouse .5s infinite linear 
+	margin-left: calc(-27px / 2)
+	animation: mouse .5s infinite linear
 	+s(mouse)
 	+r(768)
 		+sr(mouse)
-		margin-left: calc(-7px) 
+		margin-left: calc(-7px)
 
 @keyframes mouse
 	0%
@@ -344,7 +349,7 @@ body
 		transform: translateY(-2px)
 	50%
 		transform: translateY(0)
-	75% 
+	75%
 		transform: translateY(2px)
 	100%
 		transform: translateY(0)
