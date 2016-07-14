@@ -3,11 +3,16 @@ var notify = require('gulp-notify');
 var spritesmith = require('gulp.spritesmith');
 var config = require('../config');
 var imagemin = require('gulp-imagemin');
+var debug = require('gulp-debug');
 
 gulp.task('images', function() {
-    return gulp.src('./src/img/**/*')
+    return gulp.src([
+        './src/img/**/*',
+        '!./src/img/icons/*', '!./src/img/icons'
+    ])
+        .pipe(debug())
         .pipe(imagemin())
-        .pipe(gulp.dest('./www/img/'));
+        .pipe(gulp.dest('./build/img/'));
 });
 
 gulp.task('sprite', function() {
@@ -20,16 +25,18 @@ gulp.task('sprite', function() {
         padding: 4,
         // algorithm: 'top-down',
         cssTemplate: config.src.helpers + '/sprite.template.mustache'
-    }));
+    }));    
     spriteData.img
         .pipe(gulp.dest(config.dest.img));
     spriteData.css
-        .pipe(imagemin())
         .pipe(gulp.dest(config.src.sass+'/lib/'))
         .pipe(notify("New sprite created!"));
 });
 
 gulp.task('sprite:watch', function() {
     gulp.watch(config.src.img + '/icons/*.png', ['sprite','images']);
+});
+gulp.task('images:watch', function() {
+    gulp.watch(config.src.img, ['images']);
 });
 
