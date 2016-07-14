@@ -25,7 +25,7 @@ gulp.task('sprite', function() {
         padding: 4,
         // algorithm: 'top-down',
         cssTemplate: config.src.helpers + '/sprite.template.mustache'
-    }));    
+    }));
     spriteData.img
         .pipe(gulp.dest(config.dest.img));
     spriteData.css
