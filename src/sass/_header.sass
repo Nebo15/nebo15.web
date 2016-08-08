@@ -28,7 +28,12 @@
 
 // logo
 .logo
-	+s(logo)
+	+hdpi(1)
+		+s(logo)
+	+hdpi(1.3)
+		background-image: url(../img/logo-big.png) !important
+		background-size: cover
+		background-position: 0 0 !important
 	display: inline-block 
 	+r(768)
 		display: none
