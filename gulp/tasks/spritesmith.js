@@ -28,6 +28,7 @@ gulp.task('sprite', function() {
         cssTemplate: config.src.helpers + '/sprite.template.mustache'
     }));
     spriteData.img
+        .pipe(gulpIf(argv.production, imagemin()))
         .pipe(gulp.dest(config.dest.img));
     spriteData.css
         .pipe(gulp.dest(config.src.sass+'/lib/'))
