@@ -8,7 +8,8 @@ $(document).ready(function() {
 
     $('#map').each(function() { 
         function initialize() {
-            var myLatlng = {lat: 50.4458795, lng: 30.4955415 };
+
+            var myLatlng = {lat: 50.445912, lng: 30.495720 };
 
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom                : 18,

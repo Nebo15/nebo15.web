@@ -59,7 +59,7 @@ body.is-hidden { overflow: hidden; }
 .nav li:first-child { margin-top: 0; }
 .nav a { color: #043a6a; }
 
-.evidence { float: left; width: 34%; margin-top: 270px; text-shadow: 1px 1px #043a6a; }
+.evidence { float: left; width: 34%; margin-top: 270px; margin-left: 128px; }
 
 .face { float: right; margin-top: 120px; width: 47%; }
 .face img { width: 320px; }
@@ -70,7 +70,7 @@ body.is-hidden { overflow: hidden; }
 
 .buzzwords { margin-top: 8px; font-size: 14px; }
 
-.line { position: absolute; top: 50%; left: 50%; -webkit-transform: rotate(-49deg); -ms-transform: rotate(-49deg); transform: rotate(-49deg); margin: -210px 0 0 -50%; height: 420px; width: 100vw; z-index: 1; background: #043a6a; }
+.line { position: absolute; top: 50%; left: 48%; -webkit-transform: rotate(-49deg); -ms-transform: rotate(-49deg); transform: rotate(-49deg); margin: -210px 0 0 -50%; height: 420px; width: 100vw; z-index: 1; background: #043a6a; }
 .line:before, .line:after { position: absolute; content: ""; top: 0; height: 420px; width: 100vw; background: #043a6a; }
 .line:before { right: -webkit-calc(100% - 1px); right: calc(100% - 1px); }
 .line:after { left: -webkit-calc(100% - 1px); left: calc(100% - 1px); }
@@ -153,7 +153,7 @@ body.is-hidden { overflow: hidden; }
 .header__wrap:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .header .menu { vertical-align: middle; display: inline-block; }
 
-.logo { background-image: url("../img/icons.png"); width: 53px; height: 58px; background-position: -81px 0px; display: inline-block; }
+.logo { display: inline-block; }
 
 .menu { font-family: "Geometria-Light", Arial, sans-serif; text-align: left; font-size: 14px; }
 .menu li { margin-top: 15px; display: block; }
@@ -186,13 +186,16 @@ body.is-hidden { overflow: hidden; }
 @keyframes memberhide { 0% { opacity: 1; -webkit-transform: translateY(0px); transform: translateY(0px); }
   100% { opacity: 0; -webkit-transform: translateY(20px); transform: translateY(20px); } }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-webkit-min-device-pixel-ratio: 1.3020833333333333), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx){
- body{ background: url("../img/bg-large.jpeg") 0 0; background-size: cover; background-repeat: no-repeat; background-attachment: fixed; } }
+ body{ background: url("../img/bg-large.jpeg") 0 0; background-size: cover; background-repeat: no-repeat; background-attachment: fixed; }
+ .logo{ background-image: url(../img/logo-big.png) !important; background-size: cover; background-position: 0 0 !important; } }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
+@media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and (min--moz-device-pixel-ratio: 1), only screen and (min-resolution: 96dpi), only screen and (min-resolution: 1dppx){
+ .logo{ background-image: url("../img/icons.png"); width: 53px; height: 58px; background-position: -81px 0px; } }
 @media only screen and (max-width: 960px){
  .nav-name .title-middle{ display: none; } }
 @media only screen and (max-width: 900px){
- .evidence{ margin-top: 240px; } }
+ .evidence{ margin-top: 240px; margin-left: 50px; } }
 @media only screen and (max-width: 768px){
  .in, .l{ padding: 0 27px 0 22px; }
  .greeting{ margin-top: 167px; padding: 0; font-size: 15px; }
@@ -201,7 +204,7 @@ body.is-hidden { overflow: hidden; }
  .nav{ margin-top: 0; text-shadow: 1px 0 0 rgba(252, 255, 42, 0.8), 0 1px 0 rgba(252, 255, 42, 0.8), -1px 0 0 rgba(252, 255, 42, 0.8), 0 -1px 0 rgba(252, 255, 42, 0.8); }
  .nav li{ margin-top: 15px; }
  .nav a{ padding: 2px 1px 1px; }
- .evidence{ margin-top: 80px; }
+ .evidence{ margin-top: 80px; margin-left: 0; text-shadow: 1px 1px #043a6a; }
  .face{ margin-top: 30px; }
  .evidence, .face{ float: none; width: 100%; }
  .line{ margin-top: -61px; height: 220px; }
