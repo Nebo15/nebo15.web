@@ -54,7 +54,7 @@ body.is-hidden { overflow: hidden; }
 .nav-name { color: #043a6a; }
 
 .nav { margin-top: 22px; font-family: "Geometria-Bold", Arial, sans-serif; font-size: 16px; text-transform: uppercase; }
-.nav li { margin-top: 20px; display: block; }
+.nav li { margin-top: 13px; display: block; font-size: 14px; }
 .nav li.is-active { font-family: "Geometria-ExtraBold", Arial, sans-serif; }
 .nav li:first-child { margin-top: 0; }
 .nav a { color: #043a6a; }
