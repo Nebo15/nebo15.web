@@ -1,5 +1,7 @@
 Gulp Boilerplate for generic CSS/HTML/JS development
 =============
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/Nebo15/nebo15.web.svg)](https://greenkeeper.io/)
 <a href="http://riverco.de" target="_blank">riverco.de</a> gulp boilerplate.
 
 Structure
