@@ -22,9 +22,9 @@ a { text-decoration: none; }
 
 img { max-width: 100%; }
 
-html { -webkit-box-sizing: border-box; box-sizing: border-box; }
+html { box-sizing: border-box; }
 
-*, *:before, *:after { -webkit-box-sizing: inherit; box-sizing: inherit; }
+*, *:before, *:after { box-sizing: inherit; }
 
 @font-face { font-family: "svgfont"; src: url("fonts/svgfont.eot"); src: url("fonts/svgfont.eot?#iefix") format("eot"), url("fonts/svgfont.woff") format("woff"), url("fonts/svgfont.woff2") format("woff2"), url("fonts/svgfont.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 .icon, [class^="icon-"], [class*=" icon-"] { font-family: "svgfont"; font-style: normal; font-weight: normal; text-rendering: auto; speak: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
@@ -121,7 +121,7 @@ body.is-hidden { overflow: hidden; }
 
 .section { min-width: 100%; height: 100vh; width: 100%; vertical-align: top; *zoom: 1; }
 .section:after { content: " "; display: table; clear: both; }
-.section.is-what, .section.is-who { background-color: rgba(4, 58, 106, 0.68); min-height: 100vh; height: 100%; }
+.section.is-what, .section.is-who { background-color: rgba(4, 58, 106, 0.68); min-height: 100vh; }
 .section.is-what .title-small, .section.is-who .title-small { padding-left: 40px; margin-top: 20px; }
 .section.is-who { position: relative; overflow: hidden; background: rgba(252, 255, 42, 0.8); }
 .section.is-who .l { text-align: left; }
